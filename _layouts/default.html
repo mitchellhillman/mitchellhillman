@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{page.title}}</title>
+    <title>Mitchell Hillman: {{page.title}}</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <meta name="viewport" content="width=device-width">
   </head>
@@ -18,6 +18,18 @@
       ga('send', 'pageview');
     </script>
 
+    <div class="header">
+      {% if page.url != '/' %}
+      <div class="sitename">Mitchell Hillman</div>
+      {% endif %}
+
+      <ul class="mainnav">
+        {% for nav in site.data.nav %}
+        <li><a {% if nav.url==page.url %} class="active" {% endif %} href="{{ nav.url }}">{{ nav.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    
     <div class="page">
       {{content}}
     </div>

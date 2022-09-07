@@ -1,2 +1,11 @@
 sass:
   style: compressed
+permalink: /:slugified_categories/:title
+plugins:
+  - jekyll-archives
+jekyll-archives:
+  enabled: 
+    - categories
+  layout: archive
+  permalinks:
+    category: '/:name/'

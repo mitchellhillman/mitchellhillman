@@ -1,0 +1,38 @@
+.archive__list {
+  margin: 30px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.archive__item {
+  margin: 30px 0;
+}
+
+.archive__title {
+  font-weight: bold;
+  font-size: 34px;
+  margin: 0 0 16px 0;
+}
+
+.archive__meta {
+  margin: 10px 0 4px 0;
+}
+
+.archive__date {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.archive__category {
+  font-size: 12px;
+}
+
+.archive__badge {
+  font-weight: normal;
+  background: #ccc;
+  border-radius: 0.2em;
+  padding: 0.1em 0.3em;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

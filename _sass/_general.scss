@@ -12,6 +12,36 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.general {
+  max-width: 1260px;
+  margin: 0 auto;
+  &:after {
+    content:'';
+    display: table;
+    clear: both
+  }
+}
+.sitename {
+  float: left;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.mainnav {
+  font-size: 12px;
+  li {
+    float: right;
+  }
+  a {
+    float: left;
+    padding: 10px;
+  }
+  .active {
+    color: #ccc;
+    cursor: default;
+    text-decoration: none;
+  }
+}
 .page {
   margin: 0 auto;
   max-width: 760px;

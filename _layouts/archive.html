@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1 class="archive__title">Archive of <span class="archive__badge">{{ page.title }}</span></h1>
+<ul class="archive__list">
+  {% for post in page.posts %}
+  <li class="archive__item">
+    <p><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+    <p class="archive__meta">
+      <span class="archive__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </p>
+  </li>
+  {% endfor %}
+</ul>

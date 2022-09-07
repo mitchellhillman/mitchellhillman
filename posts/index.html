@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Posts"
+---
+<h1 class="archive__title">{{ page.title }}</h1>
+<ul class="archive__list">
+  {% for post in site.posts %}
+  <li class="archive__item">
+    <p><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+    <p class="archive__meta">
+      <span class="archive__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      {% if post.category %}
+      <span class="archive__category">in <a href="/{{post.category | slugify}}" class="archive__badge">{{ post.category }}</a></span>
+      {% endif %}
+    </p>
+  </li>
+  {% endfor %}
+</ul>

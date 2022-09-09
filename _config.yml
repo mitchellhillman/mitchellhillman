@@ -1,6 +1,6 @@
 sass:
   style: compressed
-permalink: /:slugified_categories/:title
+permalink: /:categories/:title
 plugins:
   - jekyll-archives
 jekyll-archives:

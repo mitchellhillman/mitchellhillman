@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Custom Node server with webpack"
-category: "Web Development" 
+category: "web-development" 
 ---
 
 My application has a custom `node.js` server for local development. It is very custom and can't be easily replaced by the more idiomatic [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/). I need the custom script to run after the webpack build is complete. And, I want the server to start automatically and stop whenever I stop webpack. 

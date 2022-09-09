@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Environment variables with webpack "
-category: "web-development" 
+title: "Environment variables with webpack"
+tags: 
+  - "webpack" 
 ---
 
 Webpack supports environment variables at build time using the `DefinePlugin`. I used this technique to avoid manually setting environment specific values in my single page application. 

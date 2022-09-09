@@ -6,8 +6,12 @@ layout: default
   <p class="post__byline">
     <span>By <a href="/">Mitchell Hillman</a> on </span>
     <span class="post__date">{{page.date | date: "%b %-d, %Y"}}</span>
-    <span>in <a href="/{{page.category | slugify}}" class="post__badge">{{ page.category }}</a></span>
+    {% for tag in page.tags %}
+      <span class="archive__tags"><a href="/tag/{{tag | slugify}}" class="archive__badge">{{ tag }}</a></span>
+    {% endfor %}
   </p>
 
   {{content}}
+
 </div>
+<p class="copyright">Copyright &copy; Mitchell Hillman {{page.date | date: "%Y"}}</p>

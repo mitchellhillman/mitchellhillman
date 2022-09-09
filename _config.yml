@@ -1,11 +1,11 @@
 sass:
   style: compressed
-permalink: /:categories/:title
+permalink: /:title
 plugins:
   - jekyll-archives
 jekyll-archives:
   enabled: 
-    - categories
+  - tags
   layout: archive
   permalinks:
-    category: '/:name/'
+    tag: '/tag/:name/'

@@ -9,9 +9,9 @@ title: "Posts"
     <p><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
     <p class="archive__meta">
       <span class="archive__date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      {% if post.category %}
-      <span class="archive__category">in <a href="/{{post.category | slugify}}" class="archive__badge">{{ post.category }}</a></span>
-      {% endif %}
+      {% for tag in post.tags %}
+      <span class="archive__tags"><a href="/tag/{{tag | slugify}}" class="archive__badge">{{ tag }}</a></span>
+      {% endfor %}
     </p>
   </li>
   {% endfor %}

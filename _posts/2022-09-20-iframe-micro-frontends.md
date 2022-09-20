@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "micro-frontend architecture with iframes"
+title: "Micro-frontend architecture with iframes"
 tags: 
   - "micro-frontend" 
   - "react.js"

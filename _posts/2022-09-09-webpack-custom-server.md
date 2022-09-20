@@ -6,12 +6,13 @@ tags:
   - "node.js"
 ---
 
-My application has a custom `node.js` server for local development. It is very custom and can't be easily replaced by the more idiomatic [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/). I need the custom script to run after the webpack build is complete. And, I want the server to start automatically and stop whenever I stop webpack. 
+My application has a custom `node.js` server for local development. It is very custom and can't be easily replaced by the more idiomatic [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/). I need the custom script to run after the webpack build is complete and I want the server to run automatically. 
 
 In `package.json`:
-```
+```js
 "scripts": {
-  "start": "webpack --env local development serve --config ./webpack.config.js
+  "start": 
+    "webpack --env local development serve --config ./webpack.config.js",
   "server": "cd ./my-custom-server && node ./server.js",
   // other scripts...
 }
@@ -21,7 +22,7 @@ To run the server script I've created an ad-hoc plugin in my webpack config.
 
 In `webpack.config.js`:
 
-```
+```js
 module.exports = (env) => {
   return {    
     // other settings...

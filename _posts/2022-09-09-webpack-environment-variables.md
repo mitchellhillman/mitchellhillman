@@ -9,7 +9,7 @@ Webpack supports environment variables at build time using the `DefinePlugin`. I
 
 In `webpack.config.js`:
 
-```
+```js
 module.exports = (env) => {
   return {    
     // other settings...
@@ -25,7 +25,7 @@ module.exports = (env) => {
 
 Then, in my application I can access the `process.env`. For example:
 
-```
+```js
 const config = process.env.local ? localConfig : deployedConfig;
 ```
 

@@ -13,7 +13,7 @@ I used an `iframe` to accomplish a micro-frontend architecture for a legacy appl
 
 Component to render a micro-frontend in an `iframe`:
 
-```
+```javascript
 import React, { useEffect, useState } from 'react';
 
 const IframeMFE = ({ 
@@ -36,7 +36,8 @@ const IframeMFE = ({
     }
   };
 
-  // intentionally outside of useEffect to avoid race condition with child app
+  // intentionally outside of useEffect 
+  // to avoid race condition with child app
   window.addEventListener('message', handler);
 
   return (
@@ -50,11 +51,12 @@ const IframeMFE = ({
   );
 };
 ```
+
 Note: the event listener is intentionally outside of `useEffect` to avoid a race condition with the child app
 ## Child App (micro-frontend)
 
 Function to test if app is inside an iframe:
-```
+```javascript
 const inIframe = () => {
   try {
     return window.self !== window.top;
@@ -65,17 +67,20 @@ const inIframe = () => {
 ```
 
 React hook to communicate with the parent application using `postMessage`:
-```
+```js
 export const usePostFrameHeight = () => {
   useEffect(() => {
     if (inIframe()) {
-      window.parent.postMessage( { frameHeight: document.body.clientHeight }, "*" );
+      window.parent.postMessage(
+        { frameHeight: document.body.clientHeight },
+        "*"
+      );
     }
   });
 };
 ```
 Additionally, each time the micro-frontend navigates to a new route it also needs to send a postMessage with the new location:
-```
+```js
   window.parent.postMessage({ frameURL: "emails" }, "*");
   navigate(`${constants.rootPath}emails`, { replace: true });
 ```
@@ -85,15 +90,17 @@ Additionally, each time the micro-frontend navigates to a new route it also need
 The child app (micro-frontend) must allow itself to embedded in an iframe. For local development I set the headers for the `webpack-dev-server` to enable this.
 
 Example `webpack.config.js`:
-```
+```js
 module.exports = (env) => ({
   ...
   devServer: {
     ...
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+      "Access-Control-Allow-Methods": 
+        "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": 
+        "X-Requested-With, content-type, Authorization",
     },
   },
 });

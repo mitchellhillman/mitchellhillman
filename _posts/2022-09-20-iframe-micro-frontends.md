@@ -11,7 +11,7 @@ I used an `iframe` to accomplish a micro-frontend architecture for a legacy appl
 
 ## Parent App (core-ui)
 
-Component to render a micro-frontend in an `iframe`
+Component to render a micro-frontend in an `iframe`:
 
 ```
 import React, { useEffect, useState } from 'react';

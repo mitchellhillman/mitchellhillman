@@ -71,10 +71,13 @@ React hook to communicate with the parent application using `postMessage`:
 export const usePostFrameHeight = () => {
   useEffect(() => {
     if (inIframe()) {
-      window.parent.postMessage(
-        { frameHeight: document.body.clientHeight },
-        "*"
-      );
+      const resizeObserver = new ResizeObserver(() => {
+        window.parent.postMessage(
+          { frameHeight: document.body.clientHeight },
+          '*'
+        );
+      });
+      resizeObserver.observe(document.body);
     }
   });
 };

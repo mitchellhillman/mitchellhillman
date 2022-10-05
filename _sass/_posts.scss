@@ -11,6 +11,11 @@
     font-size: 20px;
     margin: 30px 0 20px 0;
   }
+  blockquote {
+    margin-left: 16px;
+    border-left: 4px solid #ccc;
+    padding-left: 16px;
+  }
   p {
     margin: 20px 0;
     line-height: 1.5;
@@ -22,6 +27,12 @@
   li {
     line-height: 1.5;
     list-style-type: disc;
+  }
+  strong {
+    font-weight: 700;
+  }
+  em {
+    font-style: italic;
   }
   code {
     font-family: monospace;

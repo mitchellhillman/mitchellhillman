@@ -71,7 +71,7 @@ const duration = moment
 
 ## Full component
 
-```js
+```jsx
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import momentDuration from "moment-duration-format";

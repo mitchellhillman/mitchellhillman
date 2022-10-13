@@ -11,7 +11,7 @@ I made a timer in react with `useEffect`, `setInterval` and using [feathersjs](h
 
 ## Timer
 
-`useEffect` creates an Interval when the timer has been started.
+`useEffect` creates an `Interval` when the timer has been started.
 
 ```js
 useEffect(() => {
@@ -41,7 +41,7 @@ const handleStartTaskTimer = (obj) => {
 };
 ```
 
-When the `stop` button is clicked a new time entry is pushed to the timeLog and the timer is cleared.
+When the "Stop" button is clicked a new time entry is pushed to the timeLog and the timer is cleared.
 
 ```js
 const handleStopTaskTimer = (obj) => {

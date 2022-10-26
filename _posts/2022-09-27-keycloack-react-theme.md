@@ -1,18 +1,19 @@
 ---
 layout: post
 title: "Launching React from a Keycloak theme"
-tags: 
-  - "keycloak" 
+tags:
+  - "keycloak"
   - "react.js"
 ---
 
-[Keycloak](https://www.keycloak.org/) is highly themable using `freemarker` templates. But I need more than that to support a shared library of UI components used in the rest of my application. The solution is to use a `window.CONFIG` object to provide theme values to a React application which is launched from `registrationLayout` template. The React application can then use the shared components at build time.  
+[Keycloak](https://www.keycloak.org/) is highly themable using `freemarker` templates. But I need more than that to support a shared library of UI components used in the rest of my application. The solution is to use a `window.CONFIG` object to provide theme values to a React application which is launched from `registrationLayout` template. The React application can then use the shared components at build time.
 
 ## Template files
 
-A `react-template.ftl` layout is created in the `keycloak` theme. This is root level HTML for the theme and has markup for mounting the React application. 
+A `react-template.ftl` layout is created in the `keycloak` theme. This is root level HTML for the theme and has markup for mounting the React application.
 
 `react-template.ftl`
+
 ```html
 <#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true>
   <!DOCTYPE html>
@@ -36,9 +37,10 @@ A `react-template.ftl` layout is created in the `keycloak` theme. This is root l
 
 Note the `<#nested "form">` inside the `<head>` tag
 
-Each themed page in `keycloak` is a simple template which only defines its parent layout and sets the theme values to an object created in global scope. 
+Each themed page in `keycloak` is a simple template which only defines its parent layout and sets the theme values to an object created in global scope.
 
 `login.ftl`
+
 ```html
 <#import "react-template.ftl" as layout>
 <@layout.registrationLayout displayInfo=true; section>
@@ -68,13 +70,16 @@ Each themed page in `keycloak` is a simple template which only defines its paren
 
 ## Deployment
 
-`package.json`: 
+`package.json`:
+
 ```js
 "build": "react-scripts build && bash postbuild.sh",
 ```
-This example assumes [Create React App](https://create-react-app.dev/) as a starting point for the React app, hence the `react-scripts` for the build. The important point to note is that the custom `postbuild.sh` is called after the react app is built. 
+
+This example assumes [Create React App](https://create-react-app.dev/) as a starting point for the React app, hence the `react-scripts` for the build. The important point to note is that the custom `postbuild.sh` is called after the react app is built.
 
 `postbuild.sh`:
+
 ```bash
 #!/usr/bin/env bash
 
@@ -86,13 +91,13 @@ cp -r ./build/static $pathToResources
 # get hash from the built index.html
 build="$(cat build/index.html)"
 regex="(.*main.)(.*)(.js.*)"
-if [[ $build =~ $regex ]]; then 
+if [[ $build =~ $regex ]]; then
   hash=${BASH_REMATCH[2]}
 fi
 
 # replace hash in react-template.ftl
 template="$(cat ./keycloak/themes/lsm/login/react-template.ftl)"
-if [[ $template =~ $regex ]]; then 
+if [[ $template =~ $regex ]]; then
   new="${BASH_REMATCH[1]}$hash${BASH_REMATCH[3]}"
 fi
 echo "$new" > "./keycloak/themes/lsm/login/react-template.ftl"

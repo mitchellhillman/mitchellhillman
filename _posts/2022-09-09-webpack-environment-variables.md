@@ -1,26 +1,26 @@
 ---
 layout: post
 title: "Environment variables with webpack"
-tags: 
-  - "webpack" 
+tags:
+  - "webpack"
 ---
 
-Webpack supports environment variables at build time using the `DefinePlugin`. I used this technique to avoid manually setting environment specific values in my single page application. 
+Webpack supports environment variables at build time using the `DefinePlugin`. I used this technique to avoid manually setting environment specific values in my single page application.
 
 In `webpack.config.js`:
 
 ```js
 module.exports = (env) => {
-  return {    
+  return {
     // other settings...
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.development': JSON.stringify(env.development),
-        'process.env.local': JSON.stringify(env.local)
-      })
-    ]
-  }
-}
+        "process.env.development": JSON.stringify(env.development),
+        "process.env.local": JSON.stringify(env.local),
+      }),
+    ],
+  };
+};
 ```
 
 Then, in my application I can access the `process.env`. For example:

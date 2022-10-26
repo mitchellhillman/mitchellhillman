@@ -15,15 +15,15 @@ I made a timer in react with `useEffect`, `setInterval` and using [feathersjs](h
 
 ```js
 useEffect(() => {
-	let interval = null;
-	if (timerStart) {
-		interval = setInterval(() => {
-			// set the state for current time
-		}, 1000);
-	} else if (!timerStart) {
-		clearInterval(interval);
-	}
-	return () => clearInterval(interval);
+  let interval = null;
+  if (timerStart) {
+    interval = setInterval(() => {
+      // set the state for current time
+    }, 1000);
+  } else if (!timerStart) {
+    clearInterval(interval);
+  }
+  return () => clearInterval(interval);
 });
 ```
 
@@ -33,11 +33,11 @@ The `timerStart` needs to be persistent so that the timer is not reset when the 
 
 ```js
 const handleStartTaskTimer = (obj) => {
-	// update the task with the new start time
-	client.service("tasks").update(obj._id, {
-		...obj,
-		timerStart: new Date(),
-	});
+  // update the task with the new start time
+  client.service("tasks").update(obj._id, {
+    ...obj,
+    timerStart: new Date(),
+  });
 };
 ```
 
@@ -45,14 +45,14 @@ When the "Stop" button is clicked a new time entry is pushed to the timeLog and 
 
 ```js
 const handleStopTaskTimer = (obj) => {
-	setDiff(0);
-	const newTimeLog = obj.timeLog;
-	newTimeLog.push([obj.timerStart, new Date()]);
-	client.service("tasks").update(obj._id, {
-		...obj,
-		timeLog: newTimeLog,
-		timerStart: undefined,
-	});
+  setDiff(0);
+  const newTimeLog = obj.timeLog;
+  newTimeLog.push([obj.timerStart, new Date()]);
+  client.service("tasks").update(obj._id, {
+    ...obj,
+    timeLog: newTimeLog,
+    timerStart: undefined,
+  });
 };
 ```
 
@@ -65,8 +65,8 @@ I used `moment` to compare the `timerStart` with the current time. The primary b
 const diff = moment().diff(timerStart) / 1000;
 // get the duration as measured in seconds and then format
 const duration = moment
-	.duration(diff, "seconds")
-	.format("hh:mm:ss", { trim: false });
+  .duration(diff, "seconds")
+  .format("hh:mm:ss", { trim: false });
 ```
 
 ## Full component
@@ -80,68 +80,68 @@ import client from "./feathers";
 momentDuration(moment);
 
 function Timer({ task }) {
-	const { timerStart } = task;
-	const [diff, setDiff] = useState(0);
+  const { timerStart } = task;
+  const [diff, setDiff] = useState(0);
 
-	useEffect(() => {
-		let interval = null;
-		if (timerStart) {
-			interval = setInterval(() => {
-				setDiff(moment().diff(timerStart) / 1000);
-			}, 1000);
-		} else if (!timerStart) {
-			clearInterval(interval);
-		}
-		return () => clearInterval(interval);
-	});
+  useEffect(() => {
+    let interval = null;
+    if (timerStart) {
+      interval = setInterval(() => {
+        setDiff(moment().diff(timerStart) / 1000);
+      }, 1000);
+    } else if (!timerStart) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  });
 
-	const handleStartTaskTimer = (obj) => {
-		client.service("tasks").update(obj._id, {
-			...obj,
-			timerStart: new Date(),
-		});
-	};
+  const handleStartTaskTimer = (obj) => {
+    client.service("tasks").update(obj._id, {
+      ...obj,
+      timerStart: new Date(),
+    });
+  };
 
-	const handleStopTaskTimer = (obj) => {
-		setDiff(0);
-		const newTimeLog = obj.timeLog;
-		newTimeLog.push([obj.timerStart, new Date()]);
-		client.service("tasks").update(obj._id, {
-			...obj,
-			timeLog: newTimeLog,
-			timerStart: undefined,
-		});
-	};
+  const handleStopTaskTimer = (obj) => {
+    setDiff(0);
+    const newTimeLog = obj.timeLog;
+    newTimeLog.push([obj.timerStart, new Date()]);
+    client.service("tasks").update(obj._id, {
+      ...obj,
+      timeLog: newTimeLog,
+      timerStart: undefined,
+    });
+  };
 
-	const duration = moment
-		.duration(diff, "seconds")
-		.format("hh:mm:ss", { trim: false });
+  const duration = moment
+    .duration(diff, "seconds")
+    .format("hh:mm:ss", { trim: false });
 
-	return (
-		<div className="timer">
-			<div className={`time ${timerStart ? "active" : ""}`}>
-				{timerStart ? duration : "00:00:00"}
-			</div>
-			<button
-				type="button"
-				disabled={timerStart}
-				onClick={() => {
-					handleStartTaskTimer(task);
-				}}
-			>
-				🔴 Start
-			</button>
-			<button
-				disabled={!timerStart}
-				type="button"
-				onClick={() => {
-					handleStopTaskTimer(task);
-				}}
-			>
-				⬛ Stop
-			</button>
-		</div>
-	);
+  return (
+    <div className="timer">
+      <div className={`time ${timerStart ? "active" : ""}`}>
+        {timerStart ? duration : "00:00:00"}
+      </div>
+      <button
+        type="button"
+        disabled={timerStart}
+        onClick={() => {
+          handleStartTaskTimer(task);
+        }}
+      >
+        🔴 Start
+      </button>
+      <button
+        disabled={!timerStart}
+        type="button"
+        onClick={() => {
+          handleStopTaskTimer(task);
+        }}
+      >
+        ⬛ Stop
+      </button>
+    </div>
+  );
 }
 
 export default Timer;

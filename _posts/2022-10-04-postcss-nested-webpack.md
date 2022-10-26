@@ -40,7 +40,7 @@ Edit `post.config.js` to use the `postcss-nested` plugin.
 
 ```js
 module.exports = {
-	plugins: [require("postcss-nested"), ["autoprefixer"]],
+  plugins: [require("postcss-nested"), ["autoprefixer"]],
 };
 ```
 
@@ -58,11 +58,11 @@ For example:
 
 ```
 #foobar {
-	.my-class {
-		&__selected {
-			font-weight: bold;
-		}
-	}
+  .my-class {
+    &__selected {
+      font-weight: bold;
+    }
+  }
 }
 ```
 
@@ -70,6 +70,6 @@ compiles to:
 
 ```css
 #foobar .my-class__selected {
-	font-weight: bold;
+  font-weight: bold;
 }
 ```

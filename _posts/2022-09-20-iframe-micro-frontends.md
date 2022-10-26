@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Micro-frontend architecture with iframes"
-tags: 
-  - "micro-frontend" 
+tags:
+  - "micro-frontend"
   - "react.js"
   - "single-spa"
 ---
 
-I used an `iframe` to accomplish a micro-frontend architecture for a legacy application. In my case, the monolithic application required too much refactoring to adopt a framework like [`single-spa`](https://single-spa.js.org/), but it still needed to add a feature which could be independently deployed and shared with other applications (as well as use modern frameworks for its own development). An iframe was a simple solution but required some hacking for the new micro-frontend UI to be seamlessly embedded into its parent. To accomplish this, the embedded micro-frontend used `window.postMessage` to communicate the UI height and route to the parent. 
+I used an `iframe` to accomplish a micro-frontend architecture for a legacy application. In my case, the monolithic application required too much refactoring to adopt a framework like [`single-spa`](https://single-spa.js.org/), but it still needed to add a feature which could be independently deployed and shared with other applications (as well as use modern frameworks for its own development). An iframe was a simple solution but required some hacking for the new micro-frontend UI to be seamlessly embedded into its parent. To accomplish this, the embedded micro-frontend used `window.postMessage` to communicate the UI height and route to the parent.
 
 ## Parent App (core-ui)
 
@@ -16,7 +16,7 @@ Component to render a micro-frontend in an `iframe`:
 ```javascript
 import React, { useEffect, useState } from 'react';
 
-const IframeMFE = ({ 
+const IframeMFE = ({
     defaultHeight
     parentPath,
     src,
@@ -36,7 +36,7 @@ const IframeMFE = ({
     }
   };
 
-  // intentionally outside of useEffect 
+  // intentionally outside of useEffect
   // to avoid race condition with child app
   window.addEventListener('message', handler);
 
@@ -53,9 +53,11 @@ const IframeMFE = ({
 ```
 
 Note: the event listener is intentionally outside of `useEffect` to avoid a race condition with the child app
+
 ## Child App (micro-frontend)
 
 Function to test if app is inside an iframe:
+
 ```javascript
 const inIframe = () => {
   try {
@@ -67,6 +69,7 @@ const inIframe = () => {
 ```
 
 React hook to communicate with the parent application using `postMessage`:
+
 ```js
 export const usePostFrameHeight = () => {
   useEffect(() => {
@@ -74,7 +77,7 @@ export const usePostFrameHeight = () => {
       const resizeObserver = new ResizeObserver(() => {
         window.parent.postMessage(
           { frameHeight: document.body.clientHeight },
-          '*'
+          "*"
         );
       });
       resizeObserver.observe(document.body);
@@ -82,10 +85,12 @@ export const usePostFrameHeight = () => {
   });
 };
 ```
+
 Additionally, each time the micro-frontend navigates to a new route it also needs to send a postMessage with the new location:
+
 ```js
-  window.parent.postMessage({ frameURL: "emails" }, "*");
-  navigate(`${constants.rootPath}emails`, { replace: true });
+window.parent.postMessage({ frameURL: "emails" }, "*");
+navigate(`${constants.rootPath}emails`, { replace: true });
 ```
 
 ## CORS Issues
@@ -93,6 +98,7 @@ Additionally, each time the micro-frontend navigates to a new route it also need
 The child app (micro-frontend) must allow itself to embedded in an iframe. For local development I set the headers for the `webpack-dev-server` to enable this.
 
 Example `webpack.config.js`:
+
 ```js
 module.exports = (env) => ({
   ...
@@ -100,13 +106,13 @@ module.exports = (env) => ({
     ...
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": 
+      "Access-Control-Allow-Methods":
         "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers": 
+      "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization",
     },
   },
 });
 ```
 
-Also, The [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) function takes a second parameter for the `targetOrigin`. This can be set to `*` or something more specific. In production this value was set to the deployed URL of the parent application. 
+Also, The [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) function takes a second parameter for the `targetOrigin`. This can be set to `*` or something more specific. In production this value was set to the deployed URL of the parent application.

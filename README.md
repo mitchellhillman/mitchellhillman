@@ -36,7 +36,8 @@ _Bottomline Technologies_ | May 2019 - Dec 2022 · 3 yrs 8 mos
 
 I successfully implemented and provided ongoing support for an internal UI component library. Additionally, I took the lead in managing UI tasks for a team of three developers, specifically focused on supporting an enterprise SAAS product which is a market leader in Legal Spend Management.
 
-    React, Micro-frontends, NPM, Nexus, Jenkins, Storybook, JSS, Accessibility, Jest, React Testing Library, Cypress, D3.js
+    React, Micro-frontends, NPM, Nexus, Jenkins, Storybook, JSS, 
+    Accessibility, Jest, React Testing Library, Cypress, D3.js
 
 ### Lead UI Developer
 _Room Key_ | May 2016 - Jan 2019 · 2 yr 9 mos

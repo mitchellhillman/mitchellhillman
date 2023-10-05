@@ -2,6 +2,8 @@
 
 ### Senior Software Engineer
 
+![Portrait of Mitchell Hillman](portrait.jpg)
+
 #### 🧙‍♂️ About Me 
 As an engineer with a natural inclination for adaptability and versatility, I have a proven track record of leading software teams across diverse industries and technologies. Pushing boundaries and venturing into cutting-edge product ideas energizes me. I thrive on the challenges presented by tackling enterprise problems while remaining relentlessly committed to excellence in software design.
 
@@ -115,5 +117,5 @@ Through numerous personal and freelance projects, I have cultivated a comprehens
 
 ## Education
 B.S., Public Relations, Advertising, and Applied Communication
-- #### Liberty University#### 
+- #### Liberty University
 - Graduated May 2011

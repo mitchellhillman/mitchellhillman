@@ -2,7 +2,7 @@
 
 ### Senior Software Engineer
 
-<img src="portrait" alt="portrait" style="width:200px;"/>
+<img src="portrait.jpg" alt="portrait" style="width:200px;"/>
 
 #### 🧙‍♂️ About Me 
 As an engineer with a natural inclination for adaptability and versatility, I have a proven track record of leading software teams across diverse industries and technologies. Pushing boundaries and venturing into cutting-edge product ideas energizes me. I thrive on the challenges presented by tackling enterprise problems while remaining relentlessly committed to excellence in software design.

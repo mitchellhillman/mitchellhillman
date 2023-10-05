@@ -3,13 +3,11 @@
 ### Senior Software Engineer
 
 #### 🧙‍♂️ About Me 
-I'm a dynamic and versatile engineer with a wealth of expertise creating exceptional front-end web applications for an array of incredible companies. Having successfully led software teams in a wide range of industries including finance, service, and publishing, I possess a wealth of valuable experience.
-
-What really fuels my fire is the thrill of pushing boundaries and exploring cutting-edge product ideas. I live for the challenge of solving complex problems on an enterprise scale, always striving for perfection in the art of software design. 
+As an engineer with a natural inclination for adaptability and versatility, I have a proven track record of leading software teams across diverse industries and technologies. Pushing boundaries and venturing into cutting-edge product ideas energizes me. I thrive on the challenges presented by tackling enterprise problems while remaining relentlessly committed to excellence in software design.
 
 🌎 I am located in [Charlottesville, Virginia](https://en.wikipedia.org/wiki/Charlottesville,_Virginia).
 
-✉️ I can be reached at mitchellhillman@gmail.com
+✉️ I can be reached at mitchellhillman@gmail.com.
 
 #### Domain Knowledge
 
@@ -27,8 +25,8 @@ What really fuels my fire is the thrill of pushing boundaries and exploring cutt
 
 
 ### Senior Software Engineer
-**WillowTree** 
-- Jan 2023 - Present
+#### WillowTree
+_Jan 2023 - Present_
 
 In my role as a member of an Agile team, I provided support for various client products and technologies, with a specific focus on notable companies like Mastercard and FOX.
 
@@ -42,8 +40,8 @@ In my role as a member of an Agile team, I provided support for various client p
 - Nginx
 
 ### UI Team Lead
-**Bottomline Technologies** 
-- May 2019 - Dec 2022 · 3 yrs 8 mos
+#### Bottomline Technologies
+_May 2019 - Dec 2022 · 3 yrs 8 mos_
 
 I successfully implemented and provided ongoing support for an internal UI component library. Additionally, I took the lead in managing UI tasks for a team of three developers, specifically focused on supporting an enterprise SAAS product which is a market leader in Legal Spend Management.
 
@@ -59,8 +57,8 @@ I successfully implemented and provided ongoing support for an internal UI compo
 - D3.js
 
 ### Lead UI Developer
-**Room Key** 
-- May 2016 - Jan 2019 · 2 yr 9 mos
+#### Room Key
+_May 2016 - Jan 2019 · 2 yr 9 mos_
 
 I took the lead as a product designer and UI developer for a Hotel Search engine. My responsibilities included translating product strategy into UX design prototypes and bringing them to life through front-end code implementation.
 
@@ -70,8 +68,8 @@ I took the lead as a product designer and UI developer for a Hotel Search engine
 - Clojure (ClojureScript)
 
 ### UI Development Manager
-**Silverchair** 
-- Nov 2014 – May 2016 · 1 yr 7 mos
+#### Silverchair
+_Nov 2014 – May 2016 · 1 yr 7 mos_
 
 In my role as a manager, I oversaw a team of six UI developers who were responsible for building branded themes for a custom publishing platform.
 
@@ -80,8 +78,8 @@ In my role as a manager, I oversaw a team of six UI developers who were responsi
 - SASS
 
 ### UX Designer and Developer
-**CFA Institute (Contractor)** 
-- May 2014 - Nov 2014 · 7 mos
+#### CFA Institute (Contractor)
+_May 2014 - Nov 2014 · 7 mos_
 
 In my role as a contractor, I was responsible for designing and implementing a comprehensive redesign of the main navigation for an enterprise website. This initiative was guided by rigorous user testing, with a particular emphasis on catering to the needs of international users.
 
@@ -90,8 +88,8 @@ In my role as a contractor, I was responsible for designing and implementing a c
 - Wireframes / Prototypes
 
 ### Web Developer
-**Journey Group, Inc.** 
-- May 2013 - May 2014 · 1 yr 1 mo
+#### Journey Group, Inc.
+_May 2013 - May 2014 · 1 yr 1 mo_
 
 As an integral part of a branding and editorial studio, I specialized in delivering custom web design and development solutions for a diverse range of clients.
 
@@ -101,14 +99,14 @@ As an integral part of a branding and editorial studio, I specialized in deliver
 - MySQL
 
 ### Front End Developer
-**Venveo** 
-- Feb 2012 - May 2013 · 1 yr 4 mos
+#### Venveo
+_Feb 2012 - May 2013 · 1 yr 4 mos_
 
-I expertly transformed static designs into flawlessly precise HTML/CSS code, specifically tailored for use as CMS themes.
+I transformed static designs into flawlessly precise HTML/CSS code, specifically tailored for use as CMS themes.
 
 ### Freelance Web Development
 
-Through engaging in numerous personal and freelance projects, I have cultivated a comprehensive understanding of various web technologies.
+Through numerous personal and freelance projects, I have cultivated a comprehensive understanding of various web technologies.
 
 - Ruby on Rails
 - Laravel
@@ -117,5 +115,5 @@ Through engaging in numerous personal and freelance projects, I have cultivated 
 
 ## Education
 B.S., Public Relations, Advertising, and Applied Communication
-- **Liberty University**
+- #### Liberty University#### 
 - Graduated May 2011

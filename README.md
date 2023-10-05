@@ -88,7 +88,7 @@ _Nov 2014 – May 2016 · 1 yr 7 mos_
 <details>
   <summary>Details</summary>
 In my role as a manager, I oversaw a team of six UI developers who were responsible for building branded themes for a custom publishing platform.
-
+  
 - .NET
 - Razor
 - SASS

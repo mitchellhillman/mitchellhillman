@@ -1,17 +1,18 @@
-# Mitchell Hillman
+## Mitchell Hillman – Senior Software Engineer
 
-### Senior Software Engineer
-
-<img src="portrait.jpg" alt="portrait" style="width:200px;"/>
+<div style="padding-left: 220px; position: relative;">
+<img src="portrait.jpg" alt="portrait" style="width:160px; position: absolute; left: 0; top: 0;"/>
 
 #### 🧙‍♂️ About Me 
-As an engineer with a natural inclination for adaptability and versatility, I have a proven track record of leading software teams across diverse industries and technologies. Pushing boundaries and venturing into cutting-edge product ideas energizes me. I thrive on the challenges presented by tackling enterprise problems while remaining relentlessly committed to excellence in software design.
+I am a highly adaptable and multi-skilled software engineer with a laser focus on front-end web technologies. With a passion for pushing the boundaries of what is possible, I pride myself on my ability to seamlessly transition between different programming languages and frameworks. Whether it's crafting an engaging user interface or optimizing website performance, I am driven by the challenge of creating exceptional digital experiences. My dedication to continuous learning allows me to stay at the forefront of industry trends, enabling me to deliver cutting-edge solutions that delight users and exceed expectations. 
 
 🌎 I am located in [Charlottesville, Virginia](https://en.wikipedia.org/wiki/Charlottesville,_Virginia).
 
-✉️ I can be reached at [mitchellhillman@gmail.com](mitchellhillman@gmail.com).
+✉️ [mitchellhillman@gmail.com](mitchellhillman@gmail.com)
 
-#### Domain Knowledge
+</div>
+
+## Skills
 
 - Enterprise Software Architecture
 - Team Leadership (Mentoring and Coaching)
@@ -20,6 +21,7 @@ As an engineer with a natural inclination for adaptability and versatility, I ha
 - Test Driven Development
 - UI Automation Testing
 - Scrum / Agile
+
 
 ## Employment History
 

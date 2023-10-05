@@ -9,7 +9,7 @@ As an engineer with a natural inclination for adaptability and versatility, I ha
 
 🌎 I am located in [Charlottesville, Virginia](https://en.wikipedia.org/wiki/Charlottesville,_Virginia).
 
-✉️ I can be reached at mitchellhillman@gmail.com.
+✉️ I can be reached at [mitchellhillman@gmail.com](mitchellhillman@gmail.com).
 
 #### Domain Knowledge
 

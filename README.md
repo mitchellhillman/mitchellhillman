@@ -116,6 +116,5 @@ Through numerous personal and freelance projects, I have cultivated a comprehens
 - Angular.js
 
 ## Education
-B.S., Public Relations, Advertising, and Applied Communication
-- #### Liberty University
-- Graduated May 2011
+### B.S., Public Relations, Advertising, and Applied Communication
+Liberty University - Graduated May 2011

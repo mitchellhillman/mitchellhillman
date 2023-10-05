@@ -106,7 +106,6 @@ In my role as a contractor, I was responsible for designing and implementing a c
 - UX Design 
 - User Testing
 - Wireframes / Prototypes
-
 </details>
 
 ### Web Developer
@@ -130,6 +129,7 @@ _Feb 2012 - May 2013 · 1 yr 4 mos_
 
 <details>
   <summary>Details</summary>
+  
 I transformed static designs into flawlessly precise HTML/CSS code, specifically tailored for use as CMS themes.
 </details>
 
@@ -144,7 +144,6 @@ Through numerous personal and freelance projects, I have cultivated a comprehens
 - Laravel
 - Jekyll
 - Angular.js
-  
 </details>
 
 ## Education

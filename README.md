@@ -29,7 +29,9 @@ As an engineer with a natural inclination for adaptability and versatility, I ha
 ### Senior Software Engineer
 #### WillowTree
 _Jan 2023 - Present_
-
+<details>
+  <summary>Details</summary>
+  
 In my role as a member of an Agile team, I provided support for various client products and technologies, with a specific focus on notable companies like Mastercard and FOX.
 
 - React
@@ -41,6 +43,7 @@ In my role as a member of an Agile team, I provided support for various client p
 - Azure
 - Nginx
 
+</details>
 ### UI Team Lead
 #### Bottomline Technologies
 _May 2019 - Dec 2022 · 3 yrs 8 mos_

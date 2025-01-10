@@ -4,8 +4,9 @@
 
 <img src="portrait.jpg" alt="portrait" style="width:160px; "/>
 
-#### 🧙‍♂️ About Me 
-I am a highly adaptable and multi-skilled software engineer with a deep well of experience in front-end web technologies. I have a knack for pushing the boundaries of what is possible and also finding solutions within fixed constraints. I pride myself on my ability to seamlessly transition between different programming languages and frameworks, and have worked with teams to adopt new technologies or refine existing systems. Whether it’s crafting an engaging user interface or optimizing website performance, I am driven by the challenge of creating exceptional digital experiences. My dedication to continuous learning allows me to stay at the forefront of industry trends, enabling me to deliver cutting-edge solutions that delight users and exceed expectations.
+#### 🧙‍♂️ Bio
+
+I am an experienced technical contributor and effective team communicator. With each project I bring fast throughput on engineering tasks, unblock serious issues and guide my team toward better processes. My background is primarily in web applications, and I have a deep well of experience working with UI technologies especially Javascript based single page application frameworks. I am also very interested in full stack technologies and always looking for opportunities to contribute in other domains.
 
 🌎 I am located in [Charlottesville, Virginia](https://en.wikipedia.org/wiki/Charlottesville,_Virginia).
 

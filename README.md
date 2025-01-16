@@ -1,6 +1,6 @@
 # Mitchell Hillman
 
-### Senior Applications Developer
+### Senior Sofware Engineer (Frontend Web)
 
 <img src="portrait.jpg" alt="portrait" style="width:160px; "/>
 

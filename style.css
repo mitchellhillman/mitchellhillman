@@ -1,0 +1,123 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    text-align: justify;
+    margin: 1em 0;
+}
+
+blockquote p {
+    text-indent: 0; 
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1rem 0;
+}
+
+.main {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+
+    padding: 10% 5%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.sidebar {
+    width: 720px;
+}
+
+.portrait {
+    max-width: 100%;
+}
+
+.content {
+    width: 660px;
+}
+
+.footnotes {
+    font-size: 0.9rem;
+    margin: 4rem 0 0 1rem;
+    padding: 0;
+}
+
+.footnotes li {
+    margin: 0;
+    padding: 0;
+}
+
+.signature {
+    width: 400px;
+    max-width: 50%;
+}
+
+.photoroll {
+    padding: 5%;
+    margin: 0 auto;
+    gap: 2rem;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoroll li {
+    max-width: 480px;
+    width: 100%;
+}
+
+.photoroll img {
+    width: 100%;
+}
+
+@media (max-width: 1920px) {
+    .sidebar {
+        width: 320px;
+    }
+    .content {
+        width: 660px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .main {
+        font-size: 1rem;
+        gap: 4rem;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+    
+    .content {
+        width: 480px;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .main {
+        display: block;
+    }
+    .content {
+        margin-top: 4rem;
+        width: auto;
+        max-width: 480px;
+    }
+}
+
+@media print {
+    .main {
+        padding: 10% 0 0 0;
+        width: 75%;
+        font-size: 0.75rem;
+    }
+}

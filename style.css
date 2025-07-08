@@ -68,12 +68,8 @@ hr {
     align-items: center;
 }
 
-.photoroll li {
-    max-width: 480px;
-    width: 100%;
-}
-
 .photoroll img {
+    max-width: 480px;
     width: 100%;
 }
 

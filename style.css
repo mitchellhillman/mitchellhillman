@@ -69,11 +69,12 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 480px;
 }
 
 .photoroll img {
-    max-width: 480px;
     width: 100%;
+    display: block;
 }
 
 @media (max-width: 1920px) {

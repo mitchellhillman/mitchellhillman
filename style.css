@@ -4,7 +4,7 @@ body {
 
 p {
     text-align: justify;
-    margin: 1em 0;
+    margin: 0 0 1em 0;
 }
 
 blockquote p {
@@ -23,14 +23,14 @@ hr {
     gap: 7rem;
     justify-content: center;
 
-    padding: 10% 5%;
+    padding: 5%;
     margin: 0 auto;
     font-size: 1.2rem;
     line-height: 1.5;
 }
 
 .sidebar {
-    width: 720px;
+    width: 480px;
 }
 
 .portrait {
@@ -72,6 +72,7 @@ hr {
 }
 
 @media (max-width: 1920px) {
+    
     .sidebar {
         width: 320px;
     }
@@ -84,7 +85,7 @@ hr {
 @media (max-width: 1280px) {
     .main {
         font-size: 1rem;
-        gap: 4rem;
+        gap: 2rem;
     }
 
     .sidebar {
@@ -97,21 +98,27 @@ hr {
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 800px) {
     .main {
-        display: block;
+        flex-direction: column;
+        align-items: center;
     }
     .content {
-        margin-top: 4rem;
         width: auto;
         max-width: 480px;
     }
 }
 
-@media print {
-    .main {
-        padding: 10% 0 0 0;
-        width: 75%;
-        font-size: 0.75rem;
+@media (max-width: 480px) {
+    p {
+        text-align: left;
     }
+    blockquote {
+        margin: 0 0 0 1rem;
+    }
+    /* .sidebar {
+        width: auto;
+        margin: -4rem  -4rem  0 -4rem;
+    } */
 }
+

@@ -1,11 +1,9 @@
 const photos = [
-  // "img/compressed/headshot-00003.jpeg",
-  // "img/compressed/headshot-00004.jpeg",
-  // "img/compressed/lifestyle-00001.jpeg",
   "img/compressed/headshot-00005.jpeg",
   "img/compressed/landscape-00003.jpeg",
   "img/compressed/lifestyle-00003.jpeg",
   "img/compressed/abstract-00005.jpeg",
+  "img/compressed/lifestyle-00007.jpeg",
   "img/compressed/headshot-00001.jpeg",
   "img/compressed/abstract-00003.jpeg",
   "img/compressed/lifestyle-00002.jpeg",
@@ -15,6 +13,7 @@ const photos = [
   "img/compressed/lifestyle-00006.jpeg",
   "img/compressed/places-00001.jpeg",
   "img/compressed/landscape-00001.jpeg",
+  "img/compressed/headshot-00007.jpeg",
   "img/compressed/lifestyle-00005.jpeg",
   "img/compressed/places-00006.jpeg",
   "img/compressed/headshot-00002.jpeg",
@@ -27,6 +26,7 @@ const photos = [
   "img/compressed/abstract-00002.jpeg",
   "img/compressed/places-00007.jpeg",
   "img/compressed/places-00008.jpeg",
+  "img/compressed/places-00009.jpeg",
 ];
 
 document.body.onload = LoadImage;

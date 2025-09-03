@@ -1,120 +1,159 @@
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-p {
-    text-align: justify;
-    margin: 0 0 1em 0;
-}
-
-blockquote {
-    margin: 0 2rem 2rem 2rem;
-}
-
-blockquote p {
-    text-indent: 0; 
-    margin: 0 0 0.5rem 0;
-}
-
-
-hr {
-    border: 0;
-    border-top: 1px solid black;
-    margin: 1rem 0;
-}
-
-.main {
-    display: flex;
-    gap: 7rem;
-    justify-content: center;
-
-    padding: 5%;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.sidebar {
-    width: 480px;
-}
-
-.portrait {
-    max-width: 100%;
-}
-
-.content {
-    width: 660px;
-}
-
-.footnotes {
-    font-size: 0.9rem;
-    margin: 4rem 0 0 1rem;
-    padding: 0;
-}
-
-.footnotes li {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-.signature {
-    width: 400px;
-    max-width: 50%;
-}
-
-.photoroll {
-    padding: 5%;
-    margin: 0 auto;
-    max-width: 480px;
-}
-
-.photoroll img {
-    max-width: 100%;
-    margin: 0 0 1rem 0;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
-@media (max-width: 1920px) {
-    
-    .sidebar {
-        width: 320px;
-    }
-    .content {
-        width: 660px;
-    }
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
-@media (max-width: 1280px) {
-    .main {
-        font-size: 1rem;
-        gap: 2rem;
-    }
-
-    .sidebar {
-        width: 220px;
-    }
-    
-    .content {
-        width: 480px;
-    }
+body {   
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 1rem;
 }
 
-
-@media (max-width: 800px) {
-    .main {
-        flex-direction: column;
-        align-items: center;
-    }
-    .content {
-        width: auto;
-        max-width: 480px;
-    }
+h1 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.75rem;
 }
 
-@media (max-width: 480px) {
-    p {
-        text-align: left;
-    }
+p {
+    margin: 0 0 0.5rem 0;
 }
+
+.portrait {
+    margin: 0 0 1rem 0;
+}
+
 

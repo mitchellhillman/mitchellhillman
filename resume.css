@@ -1,0 +1,353 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, h1, h2, h3, p, ul, li, span, a, header, section, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background: #fff;
+  color: #000;
+  line-height: 1;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.download-pdf {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* Header */
+
+.resume-header {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.sep {
+  padding: 0 0.4rem;
+}
+
+.contact a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.headline-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.headline-tags {
+  font-size: 1rem;
+}
+
+.summary {
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 100%;
+}
+
+/* Sections */
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1.5rem;
+}
+
+/* Jobs */
+
+.job {
+  margin-bottom: 1.75rem;
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contractor {
+  font-weight: 300;
+}
+
+.dates {
+  font-size: 0.9rem;
+  font-weight: 300;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.job-role {
+  font-size: 0.95rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 0.7rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  font-size: 1rem;
+  line-height: 1.65;
+  padding-left: 1.1em;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+/* Skills */
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-group {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.skill-label {
+  font-weight: 500;
+  margin-right: 0.4em;
+}
+
+/* Education */
+
+.education-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  align-items: baseline;
+  font-size: 1rem;
+}
+
+.education-item .dates {
+  margin-left: auto;
+}
+
+.school {
+  font-weight: 500;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    margin-bottom: 2rem;
+  }
+
+  .job-meta {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .dates {
+    margin-left: 0;
+  }
+
+  .education-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* Print */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  @page {
+    size: letter;
+    margin: 0.45in 0.5in;
+  }
+
+  body {
+    font-size: 8.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .resume-header {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 17pt;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .contact {
+    font-size: 7.5pt;
+    gap: 0 1rem;
+    line-height: 1.5;
+    opacity: 0.7;
+  }
+
+  .headline {
+    margin: 0.35rem 0 0.3rem;
+    gap: 0.15rem;
+  }
+
+  .headline-title {
+    font-size: 8.5pt;
+  }
+
+  .headline-tags {
+    font-size: 7.5pt;
+  }
+
+  .summary {
+    font-size: 8pt;
+    line-height: 1.45;
+    max-width: 100%;
+    opacity: 0.9;
+  }
+
+  .section {
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 6pt;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
+    border-bottom-color: #ccc;
+  }
+
+  .job {
+    margin-bottom: 0.45rem;
+  }
+
+  .job-meta {
+    margin-bottom: 0.05rem;
+  }
+
+  h3 {
+    font-size: 8.5pt;
+  }
+
+  .dates {
+    font-size: 7.5pt;
+  }
+
+  .job-role {
+    font-size: 7.5pt;
+    margin-bottom: 0.2rem;
+  }
+
+  ul li {
+    font-size: 7.75pt;
+    line-height: 1.35;
+    margin-bottom: 0.1rem;
+    opacity: 0.9;
+  }
+
+  .skill-group {
+    font-size: 7.75pt;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+
+  .skills-list {
+    gap: 0.2rem;
+  }
+
+  .education-item {
+    font-size: 8pt;
+    opacity: 0.9;
+  }
+}

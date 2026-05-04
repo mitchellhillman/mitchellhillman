@@ -1,182 +1,85 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    line-height: 1;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background: #fff;
+  color: #000;
 }
 
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-body {   
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    margin: 1rem;
-}
-
-h1 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 4rem;
-}
-
-p {
-    margin: 0 0 0.5rem 0;
-    font-size: 2rem;
-    line-height: 3rem;
-}
-
-.portrait {
-    margin: 0 0 1rem 0;
-    max-width: 100%;
+.layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
 }
 
 .content {
-    margin: 0 4%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.skills {
-    display: inline-block;
+.portrait {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 960px) {
-    h1 {
-        font-size: 1.75rem;
-    }
-    
-    p {
-        margin: 0 0 0.5rem 0;
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
 
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.links a {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #0066cc;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .layout {
+    padding: 2.5rem 1.5rem;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
